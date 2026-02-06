@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ANSELEM AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- OCR Library -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body class="dark">
+
+<div class="app">
+
+  <header>
+    <h1>🤖 ANSELEM</h1>
+    <p>Smart Learning Assistant</p>
+  </header>
+
+  <section class="settings">
+    <input id="username" placeholder="Your name">
+    <button onclick="saveProfile()">Save</button>
+    <button onclick="toggleTheme()">🌗 Theme</button>
+  </section>
+
+  <main id="chat"></main>
+
+  <section class="scanner">
+    <label class="scan-btn">
+      📷 Scan Homework
+      <input type="file" accept="image/*" capture="camera" hidden onchange="scanHomework(event)">
+    </label>
+  </section>
+
+  <footer>
+    <input id="input" placeholder="Ask Anselem anything..." />
+    <button onclick="send()">Send</button>
+    <button onclick="startVoice()">🎙</button>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
